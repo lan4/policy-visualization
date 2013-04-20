@@ -1,5 +1,5 @@
 #include <fstream>
-#include <stdlib.h>
+#include <cstdlib>
 
 class World
 {

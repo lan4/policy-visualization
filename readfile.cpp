@@ -7,7 +7,7 @@ using std::endl;
 
 int main()
 {
-    World w("simple.map");
+    World w("maps/simple.map");
 
     cout << "Loaded simple.map" << endl;
     cout << "Size: " << w.getsizeX() << "," << w.getsizeY() << endl;

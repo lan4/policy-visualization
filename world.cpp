@@ -2,6 +2,8 @@
 #include "world.h"
 
 using std::ifstream;
+using std::malloc;
+using std::free;
 
 World::World(const char* worldfile)
 {
