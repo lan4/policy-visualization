@@ -13,7 +13,10 @@ int main(int argc, char* argv[])
     if (argc == 2)
        cout << "Load file from: " << argv[1] << endl;
     else
+    {
+        cout << "No World File Specified\nExiting" << endl;
         exit(1);
+    }
 
     World map(argv[1]);
 
