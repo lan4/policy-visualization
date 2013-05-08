@@ -1,8 +1,8 @@
 #include <iostream>
 #include "State.hpp"
 #include "PolicyGenerator.hpp"
-#include "SFML\System.hpp"
-#include "SFML\Window.hpp"
+#include "SFML/System.hpp"
+#include "SFML/Window.hpp"
 
 int main()
 {

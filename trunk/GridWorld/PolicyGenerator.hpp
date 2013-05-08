@@ -7,8 +7,8 @@
 #include <cstdlib>
 #include "State.hpp"
 #include "ActionManager.hpp"
-#include "SFML\System.hpp"
-#include "SFML\Graphics.hpp"
+#include "SFML/System.hpp"
+#include "SFML/Graphics.hpp"
 
 //class PolicyVisualizer;
 
@@ -29,7 +29,7 @@ namespace gw
 			std::ifstream infile(rewardFile);
 			if (infile.is_open() && infile.good())
 			{
-				for (int i = 0; i < _rewards.size(); i++)
+				for (uint i = 0; i < _rewards.size(); i++)
 				{
 					for (int j = 0; j < NUM_ACTIONS; j++)
 						infile >> _rewards[i][j];
@@ -60,14 +60,14 @@ namespace gw
 		void normalizeQVals()
 		{
 			float qMax = maxQVal(0);
-			for (int i = 1; i < _qvals.size(); i++)
+			for (uint i = 1; i < _qvals.size(); i++)
 			{
 				float newMax = maxQVal(i);
 				if (qMax < newMax)
 					qMax = newMax;
 			}
 
-			for (int i = 0; i < _qvals.size(); i++)
+			for (uint i = 0; i < _qvals.size(); i++)
 				for (int j = 0; j < NUM_ACTIONS; j++)
 					_qvals[i][j] /= qMax;
 		}
@@ -134,7 +134,7 @@ namespace gw
 
 			float qMax = _qvals[si][0];
 			int iMax = 0;
-			for (int i = 1; i < _qvals[si].size(); i++)
+			for (uint i = 1; i < _qvals[si].size(); i++)
 			{
 				if (qMax < _qvals[si][i])
 				{
@@ -143,7 +143,7 @@ namespace gw
 				}
 			}
 
-			for (int j = 0; j < _qvals[si].size(); j++)
+			for (uint j = 0; j < _qvals[si].size(); j++)
 			{
 				if (qMax >= _qvals[si][j])
 				{

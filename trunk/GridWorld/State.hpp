@@ -155,7 +155,7 @@ namespace gw
 		void initGrid(int width = DEFAULT_GRID_SIZE, int height = DEFAULT_GRID_SIZE)
 		{
 			_grid.resize(height);
-			for (int i = 0; i < _grid.size(); i++)
+			for (uint i = 0; i < _grid.size(); i++)
 				_grid[i].resize(width);
 		}
 
