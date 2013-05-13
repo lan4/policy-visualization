@@ -22,6 +22,7 @@ public:
     const char static OPEN = '.';
     const char static GOAL = 'g';
     const char static START = 's';
+    const char static SAMPLE = '*';
 
 private:
     int sizeX;
